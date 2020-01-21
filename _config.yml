@@ -111,7 +111,7 @@ author:
   avatar           : "/images/profilepic.jpg"
   bio              : "Data Science Portfolio"
   location         : "Houston, Texas"
-  email            :
+  email            : "williamhuybui@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
