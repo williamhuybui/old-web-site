@@ -5,6 +5,7 @@ tags: [machine learning, data science, neural network]
 header:
   image: "/images/grandcanyon.jpg"
 excerpt: "Machine Learning, Perceptron, Data Science"
+mathjax: "true"
 ---
 
 # H1 Heading
