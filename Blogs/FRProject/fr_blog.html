@@ -8,7 +8,6 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Clean Blog - Start Bootstrap Theme</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -53,14 +52,13 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('../../img/about-bg.jpg')">
+  <header class="masthead" style="background-image: url('fr_img/1.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
             <h1>Facial Recognition with Simplicity</h1>
-            <span class="subheading"> My mental development from handwritten digits to your face</span>
           </div>
         </div>
       </div>
@@ -72,14 +70,51 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <h1> The whole neural network thing </h1>
-        <p> When I was in school, I was first introduced to Visual Recognition by the Katana MNIST project on Kaggle. The project asks competitor to detect handwritten digit in Kannada, a language that is widely spoken in southwestern India. With convolutional neural network. There were 60 000 observation in the training set and the test set has 5000. The CNN I created is only complicated enough to detect 98.25% accuracy. This got me wonder is how hard would it be to identify faces? </p>
-        <p> Maybe I have skipped some details. The number I uses only has 784 pixels, while the normal phone camera right now has more than 8mp, which means, there are many things a machine can learn from face that consist of million pixels. Also, the Deep Learning technology that I used is very primitive.  </p>
-        <p> A great lesson that I learn during the tech transition is that, if you want to learn something, learn little from a surface, and skip to the top. That totally sabotaged the ideology that I built while studying rigorous math proof in graduate school but it makes sense. For that reason, I swallow my pride and I looked up the rich library resources on python to find out that OpenCv is what people use these days for Visual Recognition. However, I discovered that OpenCV does not like Mac, it glitches badly after display a image and took me one whole day to fix the bug.. </p>
-        <p> A following day, I attended TAMUHack, a Hackathon that gathers many big tech companies in the US. I visited one of their workshops about Google Cloud Visual API and that was a bomb. Everything I knew about visual recognition was outdated. Google technology is so sophisticated that it is impossible for the best programmer in the world to replicate. The number one reason is GPU and data resources. There are _ NN trained parallelly, each use a Tesla V100, a $6000 GPU that outperformed most of the data mining GPU nowadays, So, I spent another week to figure out that these crazy technologies came with a cost. It not only charges the user money per API call, it is also limited on tailoring different use for personal projects. I put a hold on the cloud service and brainstorm on what I actually want to do, and here is what I came up with.</p>
-        <h1>A pair of glasses that can remember my friends name and remind me the next time I meet them.</h1>
-        <p>Before I started, I have a really bad memory especially for English name. It takes me weeks to remember a person’s name and it get linearly worse with the number of syllables that name has. I decided to create a backend of this glasses, and maybe later can use it when I learn more about raspberries pie. </p>
-        <p>This time, I use dlib,a library that people claim to have better performance than open cv in facial recognition.  </p>
+        <p> I was first introduced to the visual recognition technique when I first competed in the Kannada MNIST competition on Kaggle. The project required competitors to detect handwritten digit in Kannada, a language that is widely spoken in southwestern India. There were 60,000 pictures of Kannada digits with Arabic numeral labels and 5000 pictures without labels. The machine learning algorithm that I developed was a convolutional neural network (CNN). By tweaking different layers of this network and use manifold mixed up, my accuracy reached a whopping 98.25% accuracy. Still, it took 4 hours to train the CNN with cloud computing. This got me to wonder how arduous it would be to identify human faces!</p>
+        <img src="fr_img/kannada.png" style="max-width:100%;">
+        <p> Maybe I overestimated facial recognition a little bit. In comparison, the Kannada picture has only 784 pixels, while the photo image taken by an average phone camera is x1000 better. Also, the deep learning technology that I used was very primitive.</p>
+        <img src="fr_img/2.jpg" style="max-width:100%;">
+        <p> A great lesson that I learned during the tech transition was that, if you want to learn something, learn a little from the bottom up and then learn from the top down. Even though this ideology conflicted with the academic learning linear-path style that I once possessed, it has carried me successfully through many competitions. My initial google search showed that OpenCV is what people use these days for visual recognition. However, OpenCV does not like Mac, it was hard to install, glitched badly after display images, and took me one whole day to fix the bug. </p>
+        <img src="fr_img/3.jpg" style="max-width:100%;">
 
+        <p> Soon afterwards, I attended the TAMUHack, a Hackathon that gathered many big tech companies in the U.S. I visited the Google Cloud Vision API workshop and the technology made my jaw drop. Everything I knew about visual recognition was outdated. Google technology sophistication relying on cutting-edge deep learning research, computational power from GPUs, and data resources. Google bought DeepMind, the company created an AI that defeated the "GO" champion, for 400 million dollars just for machine learning. The convinient api undoubtedly blowed my mind .</p>
+        <img src="fr_img/4.png" style="max-width:100%;">
+        <p>I spent the following week to learn about Google Cloud Vision API. However, I saw out its limitations. I cannot use its visual recognition API with a task that involves different data sources. I put a hold on the cloud service and brainstorm what I truly want to achieve.</p>
+
+        <h1>The magical glasses.</h1>
+        <p>If you a GTA V fan, you might have heard of a famous Ubisoft action title, Watch Dogs. The game is about the adventure of Aiden Pierce a high-tech vigilante who hack Chicago’s central operating system. Aiden's criminal activities cost him his niece's life and turned his life upsidedown. One of Aiden's technology enables him to look at people and immediately know their name, occupation, salary, and recent activities.</p>
+        <img src="fr_img/5.png" style="max-width:100%;">
+
+        <p>Watch Dogs inspired me to create a device that can remember my friend's name and remind me the next time I meet them. The reason is I have a really bad memory, especially for the English name. It takes me weeks to remember a person’s name and exponentially worsen when the number of syllables increases.  </p>
+        <iframe src="https://giphy.com/embed/dhHizRTTBOYko" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+        <p>The library that I used is <a href="https://github.com/ageitgey/face_recognition">dlib</a>, a library written in C++ that provides Python binding. This library is user-friendly and does not require GPU for face recognition on still images. There are 3 main steps in the project: </p>
+        <ol>
+          <li><b>Obtain data:</b> Data was downloaded from google images. They are celebrities in Viet Nam.</li>
+        <img src="fr_img/6.png" style="max-width:100%;">
+          <li><b>Face Detector:</b> This is where the complexity begins. There are two main detectors available in the library: histogram of Oriented gradients and linear SVM (<b>HOG SVM+</b>), and <b>CNN</b>. For the sake of simplicity, I chose the <a href= "https://medium.com/@mithi/vehicles-tracking-with-hog-and-linear-svm-c9f27eaf521a"> HOG SVM+ </a> model because it does not require GPU. </li>
+        <img src="fr_img/HOG.png" style="max-width:100%;">
+        <p> After pinpointing the location of the image, I used PIL to draw a rectangle to illustrate what it found. I also manually label each face and it was hilarious. </p>
+        <img src="fr_img/7.png" style="max-width:100%;">
+          <li><b>Face Encoding:</b> After obtaining the facial locations, I crop them out and store them in arrays. Each image is a 3*Width*Height dimensional array where 3 comes from the RGB values for each pixel. Since each image may have a different dimension, an embedding technique is required to transform these arrays into the same size vectors and safely preserve all the features of the faces. Dlib library provides an encoding function that turns arrays into 128D-vector. </li>
+        <img src="fr_img/8.png" style="max-width:100%;">
+          <li><b>Face Recognition:</b> There are two simple ways: use a classifier or a built-in comparison function in Dlib</li>
+            <ul style="list-style-type:circle;">
+              <li>The classifier approach is self-explanatory. We structure data in the tabular form, split it with k-fold validation, and evaluate with accuracy metric.</li>
+              <li>The comparison approach pair-wisely compares the Euclidean distance between an unknown face and a known face. It returns a Boolean vector with true means more than 60% confidence. After that, I take the majority vote to decide which one is the correct label.</li>
+            </ul>
+        </ol>
+        <img src="fr_img/9.png" style="max-width:100%;">
+        <br>
+        <h1>What will stop me?</h1>
+        <p>There will be many steps until I can reach the magical glasses stages. Some of the concern that might hinder my process:</p>
+        <ul>
+          <li><b>Lack of resources:</b> facial recognition is only useful if it can recognize people from different angles. This requires a sufficiently large number of pictures or a short video.</li>
+          <li><b>Legal issues:</b> Texas makes it a crime to intercept or record any "wire, oral, or electronic communication" unless one party to the conversation consents. Eventhough it is legal in public place, many people would not like the idea that their faces being manipulated.</li>
+          <li><b>Time-consuming:</b> This is not a marketable skill so I should not be so serious.</li>
+        </ul>
+        Nevertheless, I successfully put 1 foot to humanoid robots domain so kudos to myself!
+        <iframe src="https://giphy.com/embed/l0HlFc11AAcnNRscw" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
       </div>
     </div>
   </div>
