@@ -69,7 +69,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <h1> The whole neural network thing </h1>
+        <h1> Where did I start? </h1>
         <p> I was first introduced to the visual recognition technique when I first competed in the Kannada MNIST competition on Kaggle. The project required competitors to detect handwritten digit in Kannada, a language that is widely spoken in southwestern India. There were 60,000 pictures of Kannada digits with Arabic numeral labels and 5000 pictures without labels. The machine learning algorithm that I developed was a convolutional neural network (CNN). By tweaking different layers of this network and use manifold mixed up, my accuracy reached a whopping 98.25% accuracy. Still, it took 4 hours to train the CNN with cloud computing. This got me to wonder how arduous it would be to identify human faces!</p>
         <img src="fr_img/kannada.png" style="max-width:100%;">
         <p> Maybe I overestimated facial recognition a little bit. In comparison, the Kannada picture has only 784 pixels, while the photo image taken by an average phone camera is x1000 better. Also, the deep learning technology that I used was very primitive.</p>
@@ -81,14 +81,16 @@
         <img src="fr_img/4.png" style="max-width:100%;">
         <p>I spent the following week to learn about Google Cloud Vision API. However, I saw out its limitations. I cannot use its visual recognition API with a task that involves different data sources. I put a hold on the cloud service and brainstorm what I truly want to achieve.</p>
 
-        <h1>The magical glasses.</h1>
+        <h1> Inspiration</h1>
         <p>If you a GTA V fan, you might have heard of a famous Ubisoft action title, Watch Dogs. The game is about the adventure of Aiden Pierce a high-tech vigilante who hack Chicago’s central operating system. Aiden's criminal activities cost him his niece's life and turned his life upsidedown. One of Aiden's technology enables him to look at people and immediately know their name, occupation, salary, and recent activities.</p>
         <img src="fr_img/5.png" style="max-width:100%;">
 
         <p>Watch Dogs inspired me to create a device that can remember my friend's name and remind me the next time I meet them. The reason is I have a really bad memory, especially for the English name. It takes me weeks to remember a person’s name and exponentially worsen when the number of syllables increases.  </p>
         <iframe src="https://giphy.com/embed/dhHizRTTBOYko" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-        <p>The library that I used is <a href="https://github.com/ageitgey/face_recognition">dlib</a>, a library written in C++ that provides Python binding. This library is user-friendly and does not require GPU for face recognition on still images. There are 3 main steps in the project: </p>
+        <h1> The magical glasses</h1>
+        <p>My project is <a href="https://github.com/williamhuybui/dlib">here</a><p>
+        <p>The library that I used is <a href="https://github.com/ageitgey/face_recognition">dlib</a> which was written in C++ that provides Python binding. This library is user-friendly and does not require GPU for face recognition on still images. There are 3 main steps in the project: </p>
         <ol>
           <li><b>Obtain data:</b> Data was downloaded from google images. They are celebrities in Viet Nam.</li>
         <img src="fr_img/6.png" style="max-width:100%;">
@@ -110,12 +112,14 @@
         <h1>What will stop me?</h1>
         <p>There will be many steps until I can reach the magical glasses stages. Some of the concern that might hinder my process:</p>
         <ul>
-          <li><b>Lack of resources:</b> facial recognition is only useful if it can recognize people from different angles. This requires a sufficiently large number of pictures or a short video. For future implementation, I will use data augmentation technique from Keras and then apply transfer learning. This is a cheap way to generate more samples. The idea is rotate, zoom, change the brightness, or shift the image so that the machine can learn noises better. </li>
+          <li><b>Lack of resources:</b> facial recognition is only useful if it can recognize people from different angles. This requires a sufficiently large number of pictures or a short video. For future implementation, I will use data augmentation technique from <a href="https://keras.io/preprocessing/image/">Keras</a> and then apply transfer learning. This is a cheap way to generate more samples. The idea is rotate, zoom, change the brightness, or shift the image so that the machine can learn noises better. </li>
           <li><b>Legal issues:</b> Texas makes it a crime to intercept or record any "wire, oral, or electronic communication" unless one party to the conversation consents. Eventhough it is legal in public place, many people would not like the idea that their faces being manipulated.</li>
           <li><b>Time-consuming:</b> This is not a marketable skill for the direction which I am heading now.</li>
         </ul>
         Nevertheless, I successfully put 1 foot onto the humanoid robotics domain so kudos to myself!
         <iframe src="https://giphy.com/embed/l0HlFc11AAcnNRscw" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+
       </div>
     </div>
   </div>
