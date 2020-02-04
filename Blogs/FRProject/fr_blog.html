@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Clean Blog - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="../../css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html">Main Page</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../myprojects.html">My Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('../../img/about-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Facial Recognition with Simplicity</h1>
+            <span class="subheading"> My mental development from handwritten digits to your face</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h1> The whole neural network thing </h1>
+        <p> When I was in school, I was first introduced to Visual Recognition by the Katana MNIST project on Kaggle. The project asks competitor to detect handwritten digit in Kannada, a language that is widely spoken in southwestern India. With convolutional neural network. There were 60 000 observation in the training set and the test set has 5000. The CNN I created is only complicated enough to detect 98.25% accuracy. This got me wonder is how hard would it be to identify faces? </p>
+        <p> Maybe I have skipped some details. The number I uses only has 784 pixels, while the normal phone camera right now has more than 8mp, which means, there are many things a machine can learn from face that consist of million pixels. Also, the Deep Learning technology that I used is very primitive.  </p>
+        <p> A great lesson that I learn during the tech transition is that, if you want to learn something, learn little from a surface, and skip to the top. That totally sabotaged the ideology that I built while studying rigorous math proof in graduate school but it makes sense. For that reason, I swallow my pride and I looked up the rich library resources on python to find out that OpenCv is what people use these days for Visual Recognition. However, I discovered that OpenCV does not like Mac, it glitches badly after display a image and took me one whole day to fix the bug.. </p>
+        <p> A following day, I attended TAMUHack, a Hackathon that gathers many big tech companies in the US. I visited one of their workshops about Google Cloud Visual API and that was a bomb. Everything I knew about visual recognition was outdated. Google technology is so sophisticated that it is impossible for the best programmer in the world to replicate. The number one reason is GPU and data resources. There are _ NN trained parallelly, each use a Tesla V100, a $6000 GPU that outperformed most of the data mining GPU nowadays, So, I spent another week to figure out that these crazy technologies came with a cost. It not only charges the user money per API call, it is also limited on tailoring different use for personal projects. I put a hold on the cloud service and brainstorm on what I actually want to do, and here is what I came up with.</p>
+        <h1>A pair of glasses that can remember my friends name and remind me the next time I meet them.</h1>
+        <p>Before I started, I have a really bad memory especially for English name. It takes me weeks to remember a person’s name and it get linearly worse with the number of syllables that name has. I decided to create a backend of this glasses, and maybe later can use it when I learn more about raspberries pie. </p>
+        <p>This time, I use dlib,a library that people claim to have better performance than open cv in facial recognition.  </p>
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Huy Bui's Website 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../../js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
