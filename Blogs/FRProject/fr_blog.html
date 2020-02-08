@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <title>Huy Bui's Blog</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -77,7 +77,7 @@
         <p> A great lesson that I learned during the tech transition was that, if you want to learn something, learn a little from the bottom up and then learn from the top down. Even though this ideology conflicted with the academic learning linear-path style that I once possessed, it has carried me successfully through many competitions. My initial google search showed that OpenCV is what people use these days for visual recognition. However, OpenCV does not like Mac, it was hard to install, glitched badly after display images, and took me one whole day to fix the bug. </p>
         <img src="fr_img/3.jpg" style="max-width:100%;">
 
-        <p> Soon afterwards, I attended the TAMUHack, a Hackathon that gathered many big tech companies in the U.S. I visited the Google Cloud Vision API workshop and the technology made my jaw drop. Everything I knew about visual recognition was outdated. Google technology sophistication relying on cutting-edge deep learning research, computational power from GPUs, and data resources. Google bought DeepMind, the company created an AI that defeated the "GO" champion, for 400 million dollars just for machine learning. The convinient api undoubtedly blowed my mind .</p>
+        <p> Soon afterwards, I attended the TAMUHack, a Hackathon that gathered many big tech companies in the U.S. I visited the Google Cloud Vision API workshop and the technology made my jaw drop. Everything I knew about visual recognition was outdated. Google technology sophistication relying on cutting-edge deep learning research, computational power from GPUs, and data resources. Google bought DeepMind, the company created an AI that defeated the "GO" champion, for 400 million dollars just for machine learning. The convinient api undoubtedly blew my mind .</p>
         <img src="fr_img/4.png" style="max-width:100%;">
         <p>I spent the following week to learn about Google Cloud Vision API. However, I saw out its limitations. I cannot use its visual recognition API with a task that involves different data sources. I put a hold on the cloud service and brainstorm what I truly want to achieve.</p>
 
@@ -98,8 +98,9 @@
         <img src="fr_img/HOG.png" style="max-width:100%;">
         <p> After pinpointing the location of the image, I used PIL to draw a rectangle to illustrate what it found. I also manually label each face and it was hilarious. </p>
         <img src="fr_img/7.png" style="max-width:100%;">
-          <li><b>Face Encoding:</b> After obtaining the facial locations, I crop them out and store them in arrays. Each image is a 3*Width*Height dimensional array where 3 comes from the RGB values for each pixel. Since each image may have a different dimension, an embedding technique is required to transform these arrays into the same size vectors and safely preserve all the features of the faces. Dlib library provides an encoding function that turns arrays into 128D-vector. </li>
         <img src="fr_img/8.png" style="max-width:100%;">
+          <li><b>Face Encoding:</b> After obtaining the facial locations, I crop them out and store them in arrays. Each image is a 3*Width*Height dimensional array where 3 comes from the RGB values for each pixel. Since each image may have a different dimension, an embedding technique is required to transform these arrays into the same size vectors and safely preserve all the features of the faces. Dlib library provides an encoding function that turns arrays into 128D-vector. </li>
+        <img src="fr_img/10.png" style="max-width:100%;">
           <li><b>Face Recognition:</b> There are two simple ways: use a classifier or a built-in comparison function in Dlib</li>
             <ul style="list-style-type:circle;">
               <li>The classifier approach is self-explanatory. We structure data in the tabular form, split it with k-fold validation, and evaluate with accuracy metric.</li>
